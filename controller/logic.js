@@ -37,5 +37,10 @@ class Logic {
   getAllCpuLogic = (req, res) => {
     new Plugin().getAllCpuPlugin(req, res);
   };
+
+  // ล้มเหลว
+  // deleteLogic = (req, res) => {
+  //   new Plugin().deletePlugin(req, res);
+  // }
 }
 module.exports = { Logic };

@@ -27,6 +27,8 @@ router.get("/", function (req, res) {
   res.render("index", { title: "" });
 });
 
-router.get("/allcpu", new Endpoint().getAllCpuEndpoint);
+// ล้มเหลว
+// router.get("/allcpu", new Endpoint().getAllCpuEndpoint);
+// router.delete("/delete/(:id)", new Endpoint().deleteEndpoint);
 
 module.exports = router;

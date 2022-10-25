@@ -41,6 +41,7 @@ class Plugin {
         console.log(err);
       } else {
         return res.status(201).send({ response: "delete cputable finish" });
+        // return res.redirect("/getcpu");
       }
     });
   };
@@ -134,5 +135,21 @@ class Plugin {
             }
         })
     }*/
+
+  // ล้มเหลว
+  // deletePlugin = (req, res) => {
+  //   var country = { id: req.params.id };
+
+  //   let sql =
+  //     `DELETE FROM cputable 
+  //     WHERE id = ` + req.params.id;
+  //   connection.query(sql, req.params.id, req.params.id, function (err) {
+  //     if (err) {
+  //       console.log("error to delete at : " + err);
+  //     } else {
+  //       return res.redirect("/cpu/list");
+  //     }
+  //   });
+  // };
 }
 module.exports = { Plugin };

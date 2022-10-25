@@ -1,0 +1,27 @@
+<table width="80%" border="0" id="countries">
+  <tr style="text-align: left; background-color: #ccc">
+    <th id="id">ID</th>
+    <th id="time_cpu">TIME_CPU</th>
+    <th id="core_cpu">CORE_CPU</th>
+  </tr>
+
+  <!--
+		Using FOREACH LOOP for the countries array
+		
+		myArray.forEach(function(el, index) {
+			// el - current element, i - index
+		});
+	-->
+  <% if (data) { %> <% data.forEach(function(data){ %>
+  <tr>
+    <td id="id"><%= data.id %></td>
+    <td id="time_cpu"><%= data. %></td>
+    <td id="core_cpu"><%= data.cca2 %></td>
+  </tr>
+  <% }) %> <% } %>
+</table>
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>

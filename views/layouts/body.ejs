@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="d-flex bd-highlight mb-3">
+    <div class="p-2 bd-highlight"></div>
+  </div>
+  <!--ใช้สำหรับ Input โดยยิง api /createCPU-->
+  <form method="post" action="/createCpu">
+    <!--ระบุค่าลงใน Database-->
+    <label for="time_cpu"><b>Time CPU:</b></label>
+    <input type="text" id="time_cpu" name="time_cpu" /><br /><br />
+
+    <!--ระบุค่าลงใน Database-->
+    <label for="core_cpu"><b>Core CPU:</b></label>
+    <input type="text" id="core_cpu" name="core_cpu" /><br /><br />
+    <input
+      type="submit"
+      value="Submit"
+      class="button button1"
+    /><br /><br /><br />
+  </form>
+
+  <!--ส่วนแสดงตาราง (แสดงrecord ในดาต้าเบส)-->
+  <!-- <div class="table-responsive">
+    <table class="table"> -->
+  <!--หัวตาราง-->
+  <!-- <thead class="table-danger">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">time_cpu</th>
+          <th scope="col">core_cpu</th>
+        </tr>
+      </thead> -->
+  <!--Record ตาราง-->
+  <!-- <tbody id="mytable">
+        <tr>
+          <th scope="row" colspan="3">Loading...</th>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+</div>

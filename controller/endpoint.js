@@ -38,6 +38,12 @@ class Endpoint {
     new Logic().getAllCpuLogic(req, res);
   };
 
+  // ล้มเหลว
+  deleteEndpoint = (req, res) => {
+    console.log("click parm delete");
+    new Logic().deleteLogic(req, res);
+  };
+
   // ViralMemeEndpoint = (req, res) => {
   //    new Logic().getViralMemeLogic(res);
   // }
