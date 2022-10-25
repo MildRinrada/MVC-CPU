@@ -53,9 +53,8 @@ class Plugin {
         console.log(err);
       } else {
         console.log("error 2");
-        return res.status(201).send({ response: "successs" });
-        // return res.send({ data: result });
-        // return res.render("partial/cpulist", { data: result });
+        // return res.status(201).send({ data: result });
+        return res.render("country/list", { data: result });
       }
     });
   };
@@ -85,7 +84,7 @@ class Plugin {
   ) => {
     let sql = ` SELECT id,time_cpu,core_cpu
                     FROM cputable 
-                    WHERE id = ? `;
+                    WHERE id = ?`;
     connection.query(sql, [cputable.id], function (err, result) {
       if (err) {
         console.log(err);
