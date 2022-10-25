@@ -23,7 +23,8 @@ class Plugin {
           console.log(err);
         } else {
           console.log("create cputable finish");
-          return res.render("/", { title: "" });
+          // return res.render("index", { title: "" });
+          return res.redirect("/getcpu");
         }
       }
     );
