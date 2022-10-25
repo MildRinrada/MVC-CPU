@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="th">
+    
+  <head>
+  <script>
+    getCustomerData()
+    {
+      axios 
+      .get('http://localhost:3000/')
+    }
+  </script>
+
+  <!--ตกแต่ง GUI-->    
+  <style>
+
+  /*สีแบงค์กาวด์หัว*/
+  .bg-header { background-color: #E0A2A2; }
+
+  /*สีหน้าเว็บ*/
+  body 
+  {
+    font-size: 1.0rem;
+    background-color: #f6f8fa;
+  }
+
+  /*ปรับตาราง*/
+  th { line-height: 2rem; }
+
+  /*ใส่คุณสมบัติของปุ่ม*/
+  .button 
+  {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /*ตกแต่งปุ่ม*/
+  .button1 
+  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #E0A2A2;
+  }
+
+  /*เวลาเอาเมาส์ชี้ สีเปลี่ยน*/
+  .button1:hover 
+  {
+    background-color: #E0A2A2;
+    color: white;
+  }
+
+  </style>
+
+    <!-- ใส่ meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap ใช้ทำ Frontend Framework ให้ดูดี สวยงามขึ้น-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- ชื่อแท็บ -->
+    <title>63050176 MVC</title>
+
+  </head>
+
+  <body>
+    <!--ทำ header ด้านบนสุด-->
+    <nav class="navbar navbar-dark bg-header">
+      <div class="container-fluid"> <a class="navbar-brand" href="#">63050176&nbsp;&nbsp;|&nbsp;&nbsp;Rinrada Laiad</a></div>
+    </nav>
+    <%=title%>
+    <div class="container">
+    <div class="d-flex bd-highlight mb-3">
+    <div class="p-2 bd-highlight">
+    </div>
+    </div>
+      <!--ใช้สำหรับ Input โดยยิง api /createCPU-->
+      <form method = "post" action = "/createCpu">
+        <!--ระบุค่าลงใน Database-->
+        <label for="time_cpu"><b>Time CPU:</b></label>
+        <input type="text" id="time_cpu" name="time_cpu"><br><br>
+        
+        <!--ระบุค่าลงใน Database-->  
+        <label for="core_cpu"><b>Core CPU:</b></label>
+        <input type="text" id="core_cpu" name="core_cpu"><br><br>
+        <input type="submit" value="Submit" class="button button1"/><br><br><br>
+      </form>
+      
+      <!--ส่วนแสดงตาราง (แสดงrecord ในดาต้าเบส)-->
+      <div class="table-responsive">
+        <table class="table">
+          <!--หัวตาราง-->
+          <thead class="table-danger">
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">time_cpu</th>
+              <th scope="col">core_cpu</th>
+            </tr>
+          </thead>
+          <!--Record ตาราง-->
+          <tbody id="mytable">
+          
+            <tr>
+              <th scope="row" colspan="3">Loading...</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
