@@ -54,7 +54,7 @@ class Plugin {
       } else {
         console.log("error 2");
         // return res.status(201).send({ data: result });
-        return res.render("country/list", { data: result });
+        return res.render("cpu/list", { data: result, title: "CPUListPage" });
       }
     });
   };
